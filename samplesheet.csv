@@ -1,0 +1,3 @@
+read1,read2,SampleID,reference,region,threads,pathvcf,trimmomatic,picard,varscan,annovar
+Sample1_R1_001.fastq.gz,Sample1_R2_001.fastq.gz,Sample1,/path/to/reference.fasta,/path/to/bedfile,4,/path/to/pathogenicVCF,/path/to/trimmomatic.jar,path/to/picard.jar,path/to/VarScan.v2.4.0.jar,path/to/annovar
+Sample2_R1_001.fastq.gz,Sample2_R2_001.fastq.gz,Sample2,/path/to/reference.fasta,/path/to/bedfile,4,/path/to/pathogenicVCF,/path/to/trimmomatic.jar,path/to/picard.jar,path/to/VarScan.v2.4.0.jar,path/to/annovar
