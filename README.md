@@ -1,10 +1,10 @@
-## SnapSeq
+# SnapSeq
 
-# About
+## About
 Scalable non-invasive amplicon-based precision sequencing (SNAPseq), is a cost-effective method for genetic testing and screening of β-hemoglobinopathies. This is a script for automated analysis pipeline for amplicon seq of samples and report of pathogenic variants.
 
 
-# Dependencies
+## Dependencies
 1. GNU Parallel
 2. Trimmomatic
 3. samtools
@@ -14,13 +14,18 @@ Scalable non-invasive amplicon-based precision sequencing (SNAPseq), is a cost-e
 7. Annovar
 8. R Packages (argparse, dplyr, stringr, data.table, ggplots2, gmoviz, regioneR)
 
- # Usage
-Usage: SnapSeq_multi.sh [OPTIONS].
+ ## Usage
+   Usage: SnapSeq_multi.sh [OPTIONS].
+
 Options:.
+  
   -s, --samplesheet     samplesheet csv file.
+  
   -p, --parallel     Number of jobs in parallel.
+  
   -H, --help     Display this message.
 
+## Samplesheet format
 The samplesheet.csv should contain the following feilds;
 1. read1 - Read1 fastq file (gziped).
 2. read2 - Read2 fastq file (gziped).
