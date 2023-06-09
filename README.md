@@ -20,8 +20,8 @@ Options:
   -H, --help     Display this message
 
 The samplesheet.csv should contain the following feilds;
-1. read1 - Read1 fastq file (GZiped).
-2. read2 - Read2 fastq file (GZiped).
+1. read1 - Read1 fastq file (gziped).
+2. read2 - Read2 fastq file (gziped).
 3. SampleID - Unique sample name.
 4. reference - path/to/reference.fasta(bwa index should be build in the same directory).
 5. region - path/to/bed file of amplified region.
