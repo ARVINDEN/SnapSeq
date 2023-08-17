@@ -33,7 +33,7 @@ Download the latest version of [ANNOVAR](https://annovar.openbioinformatics.org/
 
 ## Usage
 ```
-   ./SnapSeq_multi.sh -s samplesheet.csv -p 5
+./SnapSeq_multi.sh -s samplesheet.csv -p 5
 ```
 Options:.
   
