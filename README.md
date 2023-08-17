@@ -4,17 +4,34 @@
 Scalable non-invasive amplicon-based precision sequencing (SNAPseq), is a cost-effective method for genetic testing and screening of β-hemoglobinopathies. This is a script for automated analysis pipeline for amplicon seq of samples and report of pathogenic variants.
 
 
-## Dependencies
-1. GNU Parallel
-2. Trimmomatic
-3. samtools
-4. bwa
-5. Picard tools
-6. VarScan
-7. Annovar
-8. R Packages (argparse, dplyr, stringr, data.table, ggplots2, gmoviz, regioneR)
+# Quickstart
 
- ## Usage
+## Installation
+For ease of installation all the dependencies required for the SnapSeq pipeline are preinstalled in a conda environment. To use conda, download and install the latest version of [Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html).
+
+Create and activate the conda environment SnapSeq
+```
+conda create env -f SnapSeq.yaml
+conda activate SnapSeq
+```
+## Reference genome and index
+Download the human GRCh38 genome build fasta file from [ucsc]([url](https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/)) and build index as follows,
+
+```
+mkdir GenomeBuild
+wget https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz
+gunzip  hg38.fa.gz
+bwa index hg38.fa
+```
+
+## Download ANNOVAR and refGene database
+Download the latest version of [ANNOVAR](https://annovar.openbioinformatics.org/en/latest/user-guide/download/#annovar-main-package) into a directory of interest and download the refGene database as follows,
+
+```
+./annotate_variation.pl --downdb refGene --buildver hg38 humandb
+```
+
+## Usage
    Usage: SnapSeq_multi.sh [OPTIONS].
 
 Options:.
@@ -34,7 +51,4 @@ The samplesheet.csv should contain the following feilds;
 5. region - path/to/bed file of amplified region.
 6. threads - Number of threads to use.
 7. pathvcf - path/to/pathogenic variants VCF.
-8. trimmomatic - path/to/trimmomatic.jar file.
-9. picard - path/to/picard.jar file.
-10. varscan - path/to/varscan.jar file.
-11. annovar - path/to/annovar.
+8. annovar - path/to/annovar.
