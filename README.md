@@ -19,6 +19,7 @@ Download the human GRCh38 genome build fasta file from [ucsc]([url](https://hgdo
 
 ```
 mkdir GenomeBuild
+cd GenomeBuild
 wget https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz
 gunzip  hg38.fa.gz
 bwa index hg38.fa
